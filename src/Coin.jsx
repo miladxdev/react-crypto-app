@@ -1,12 +1,11 @@
 const Coin = ({ coin }) => {
   const priceChangePositiveStyle = {
-    color: "lightgreen",
-    marginLeft: ".5rem"
+    background: "lightgreen",
   };
 
   const priceChangeNegativeStyle = {
-    color: "crimson",
-    marginLeft: ".5rem"
+    background: "crimson",
+    color: "white"
   };
 
   return (
@@ -21,18 +20,21 @@ const Coin = ({ coin }) => {
 
       <p>
         {coin.current_price.toFixed(2)}$
-        <small
+      </p>
+
+      <div>
+        <p className="coin-change-24h"
           style={
             coin.price_change_percentage_24h > 0
               ? priceChangePositiveStyle
               : priceChangeNegativeStyle
           }
         >
-          {Math.round(coin.price_change_percentage_24h)}%
-        </small>
-      </p>
-
-      <p>{coin.market_cap}$</p>
+          {Math.round(coin.price_change_percentage_24h)} %
+        </p>
+      </div>
+      
+      <p>{(coin.market_cap / 10e6).toFixed(2)} m$</p>
     </div>
   );
 };
