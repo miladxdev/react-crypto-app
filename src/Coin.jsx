@@ -18,9 +18,7 @@ const Coin = ({ coin }) => {
 
       <h4>{coin.name}</h4>
 
-      <p>
-        {coin.current_price.toFixed(2)}$
-      </p>
+      <p>{coin.current_price.toFixed(2)}$</p>
 
       <div>
         <p className="coin-change-24h"
@@ -33,7 +31,7 @@ const Coin = ({ coin }) => {
           {Math.round(coin.price_change_percentage_24h)} %
         </p>
       </div>
-      
+
       <p>{(coin.market_cap / 10e6).toFixed(2)} m$</p>
     </div>
   );

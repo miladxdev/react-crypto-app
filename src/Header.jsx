@@ -17,15 +17,14 @@ const Header = () => {
       .get("https://api.coingecko.com/api/v3/search/trending")
       .then((res) => {
         setTrendingCoins(res.data.coins);
-        console.log(trendingCoins);
-      });
+       
+      }).then(console.log(trendingCoins));
+
   }, []);
 
   return (
     <header>
       <div className="page-wrapper">
-        <h1 className="header-title">CRYPTO APP</h1>
-
         <div className="trending-container">
           <p className="trending-title">Trending Coins</p>
 
@@ -35,10 +34,11 @@ const Header = () => {
             autoPlay={true}
             animationDuration={1000}
             infinite={true}
+            
             autoPlayInterval={4000}
             disableButtonsControls={true}
             disableDotsControls={true}
-            responsive={{ 1024: { items: 6 }, 480: {items: 4}, 0: {items: 2}}}
+            responsive={{ 1024: { items: 5 }, 480: {items: 4}, 0: {items: 2}}}
           />
         </div>
       </div>
