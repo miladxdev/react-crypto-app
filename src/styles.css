@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+:root {
+  --link-color: rgba(4, 17, 29, 0.75);
+}
 body {
   background-color: #fafafa;
 
@@ -40,11 +43,11 @@ h1 {
 
 /* ---------------- Header ---------------- */
 header {
-  padding: 6rem 0;
+  padding: 9.5rem 0 6rem 0;
+
   text-align: center;
   margin-bottom: 2rem;
   background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url("./img/background.jpg");
-  /* background-color: #fbfdff; */
   background-position: center center;
   background-size: cover;
 }
@@ -63,8 +66,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 4.5rem;
-  color: rgba(4, 17, 29, 0.75);
-  /* margin-bottom: 1rem; */
+  color: var(--link-color);
 }
 .nav-list {
   display: flex;
@@ -108,45 +110,64 @@ nav {
   outline: 4px solid rgb(229, 232, 235);
 }
 .coin > * {
-  /* border: 1px dashed white; */
-  flex-grow: 1;
-  flex-basis: 0;
+  /* border: 1px dashed rgb(31, 31, 31); */
 }
 
 /* ---------------- Coin ---------------- */
 .coin {
   padding: 0.6rem 0.8rem;
-  /* margin-bottom: 1rem; */
   border-bottom: 1px solid rgb(229, 232, 235);
   border-radius: 0.5rem;
   background: #fafafa;
   color: #121314;
   display: flex;
-  gap: 1rem;
+  /* gap: 1rem; */
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   transition: background 100ms;
 }
 .coin:hover {
-  /* outline: 2px solid #11ece5; */
   background: #ebecf0;
 }
-
-.coin-image-wrapper {
+.coins-header {
+  padding: 0.6rem 0.8rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  border-bottom: 2px solid lightblue;
+}
+.coins-header * {
+  /* border: 1px dashed rgb(31, 31, 31); */
+}
+.coin-rank {
+  width: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.coin-favorite {
+  color: var(--link-color);
+}
+.coin-image-wrapper {
 }
 .coin-image-wrapper img {
   width: 50px;
 }
-.coin-rank {
-  margin-right: 0.8rem;
+.coin-name {
+  width: 200px;
 }
 .coin-symbol {
-  margin-left: 0.8rem;
   color: grey;
+  width: 100px;
 }
+.coin-price {
+  width: 100px;
+}
+.coin-market-cap {
+  width: 110px;
+}
+
 .coin-change-24h {
   width: 50px;
   height: 30px;
@@ -180,7 +201,7 @@ nav {
   padding: 1rem;
   border-radius: 0.5rem;
   /* box-shadow: 0 8px 40px -8px hsl(210, 14%, 90%); */
-  border: 1px solid hsl(210, 14%, 90%);
+  /* border: 1px solid hsl(210, 14%, 90%); */
   cursor: pointer;
   transition: background 100ms;
   -webkit-user-select: none;
