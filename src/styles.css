@@ -7,7 +7,8 @@
 }
 
 :root {
-  --link-color: rgba(4, 17, 29, 0.75);
+  --text-color: rgba(4, 17, 29, 0.75);
+  --link-color: hsl(215deg 39% 69%);
 }
 
 body {
@@ -67,48 +68,64 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 4.5rem;
-  color: var(--link-color);
+  gap: 1rem;
+  color: var(--text-color);
 }
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-logo img {
+  width: 34px;
+  margin-right: 0.5rem;
+}
+
 .nav-list {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
 }
-.nav-list a {
-  color: hsl(215deg 39% 69%);
+.nav-link {
   transition: opacity 100ms;
+  color: inherit;
 }
-.nav-list a:hover {
-  opacity: 0.8;
+.nav-link:hover {
+  opacity: 0.7;
 }
 
 /* -- Search input */
 .search-container {
   position: relative;
-  max-width: 100%;
-  margin: 0 auto;
+  flex-grow: 0.8;
 }
 .search-icon {
   position: absolute;
-  right: 1rem;
-  top: 54%;
+  left: 1rem;
+  top: 58%;
   transform: translateY(-50%);
-  font-size: 1.6rem;
-  color: hsl(215deg 39% 69%);
+  font-size: 1.4rem;
+  color: inherit;
+  color: hsl(210, 13%, 60%);
 }
 .search-input {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 3rem;
   border: none;
-  outline: 2px solid rgb(229, 232, 235);
+  outline: 2px solid #e5e8eb;
   width: 100%;
   background: transparent;
   font-family: inherit;
-  color: inherit;
   border-radius: 0.5rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 .search-input:focus {
-  outline: 4px solid rgb(229, 232, 235);
+  outline: 4px solid #e5e8eb;
+}
+.search-input::placeholder {
+  color: hsl(210, 13%, 60%);
 }
 .coin > * {
   /* border: 1px dashed rgb(31, 31, 31); */
@@ -147,12 +164,12 @@ nav {
   align-items: center;
 }
 .coin-favorite {
-  color: var(--link-color);
+  color: var(--text-color);
 }
 .coin-image-wrapper {
 }
 .coin-image-wrapper img {
-  width: 50px;
+  width: 45px;
 }
 .coin-name {
   width: 200px;
