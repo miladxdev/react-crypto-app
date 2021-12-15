@@ -9,6 +9,7 @@
 :root {
   --link-color: rgba(4, 17, 29, 0.75);
 }
+
 body {
   background-color: #fafafa;
 
@@ -121,7 +122,6 @@ nav {
   background: #fafafa;
   color: #121314;
   display: flex;
-  /* gap: 1rem; */
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
@@ -159,7 +159,7 @@ nav {
 }
 .coin-symbol {
   color: grey;
-  width: 100px;
+  /* width: 100px; */
 }
 .coin-price {
   width: 100px;
