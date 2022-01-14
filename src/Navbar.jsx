@@ -1,7 +1,7 @@
 import { IoSearch } from "react-icons/io5";
 import logo from './img/logo.png'
 
-const Navigation = () => {
+const Navbar = () => {
   return (
     <div className="nav-wrapper">
       <div className="page-wrapper">
@@ -40,4 +40,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Navbar;

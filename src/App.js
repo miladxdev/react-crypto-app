@@ -3,24 +3,22 @@ import { Switch, Route } from "react-router-dom";
 
 // Components
 import Navbar from "./Navbar";
-import Header from "./Header";
-import Home from "./Home";
+import Home from "./pages/Home";
+import CoinPage from "./pages/CoinPage";
 
 export default function App() {
   return (
     <div className="App">
       <Navbar />
 
-      <Header />
-
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
 
-        {/* <Route path="/coins/:id">
+        <Route path="/coins/:id">
           <CoinPage />
-        </Route> */}
+        </Route>
       </Switch>
     </div>
   );
